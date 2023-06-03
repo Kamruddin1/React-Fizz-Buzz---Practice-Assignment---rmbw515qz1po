@@ -32,10 +32,10 @@ const App = () => {
   return (
     <div id="main">
 
-      <button onClick={handleIncrement}>increment</button>
+      <button onClick={handleIncrement}>Increment</button>
       <p className={getColorClassName()}>{count}</p>
       
-      <button onClick={handleDecrement}>decrement</button>
+      <button onClick={handleDecrement}>Decrement</button>
 
     </div>
   )
