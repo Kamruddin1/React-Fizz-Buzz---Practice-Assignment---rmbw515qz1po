@@ -4,12 +4,12 @@ const App = () => {
  const [count, setCount] = useState(1);
 
   const handleIncrement = () => {
-    setCount(count + 1);
+    setCount((prevState) => prevState +1);
   };
 
   const handleDecrement = () => {
     if (count > 1) {
-      setCount(count - 1);
+      setCount((prevState) => prevState -1);
     }
   };
 
@@ -27,8 +27,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <div id="counter" className={getCounterClass()}>{count}</div>
+    
       <button id="increment" onClick={handleIncrement}>Increment</button>
+      <div id="counter" className={getCounterClass()}>{count}</div>
       <button id="decrement" onClick={handleDecrement}>Decrement</button>
     </div>
   );
